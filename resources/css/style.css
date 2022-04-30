@@ -108,6 +108,42 @@ nav ul li:hover {
     padding: 1rem 0;
 }
 
+/* recent projects */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.recent-projects {
+    grid-column: 2 / 2;
+    padding-top: 1rem;
+}
+
+.project {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.project h4 {
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+    grid-column: 1 / 4;
+}
+
+.project h6 {
+    font-style: italic;
+    grid-column: 5 / 5;
+}
+
+.project p {
+    font-size: 1rem;
+    grid-column: 1 / 6;
+}
+
+/* media queries */
+
 @media screen and (max-width: 1060px) {
     .banner-text {
         grid-column: 14 / 20;
