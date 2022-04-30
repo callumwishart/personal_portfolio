@@ -22,4 +22,135 @@ html {
   img {
     max-width: 100%;
     height: auto;
+} 
+
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+
+}
+
+/* header styling */
+
+header {
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    height: 4rem;
+    background-color: rgb(251, 248, 248);
+    justify-items: center;
+    align-items: center;
+}
+
+header h1 {
+    grid-column: 2 / 5;
+    font-weight: 700;
+    font-family: 'Righteous', cursive;
+}
+
+header nav {
+    grid-column: 30 / 40;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 2rem;
+    text-transform: uppercase;
+}
+
+nav ul li:hover {
+    font-weight: 700;
+}
+
+/* banner styling */
+
+.banner {
+    background-image: url("../images/IMG_6481.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.intro {
+    background-color: rgba(250, 249, 249, 0.8);
+    grid-column: 2 / 6;
+    grid-row: 1 / 5;
+    padding: 1rem;
+}
+
+.banner-text {
+    background-color: rgba(250, 249, 249, 0.8);
+    grid-column: 17 / 20;
+    grid-row: 2 / 4;
+    padding: 1rem 1.5rem;
+    overflow: hidden;
+}
+
+.banner-text h3 {
+    font-weight: 700;
+}
+
+.banner-text ul {
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+.banner-text ul li {
+    padding: 1rem 0;
+}
+
+@media screen and (max-width: 1060px) {
+    .banner-text {
+        grid-column: 14 / 20;
+    }
+    .intro {
+        grid-column: 2 / 10;
+    }
+    nav ul li {
+        padding: 0 0.6rem;
+    }
+}
+@media screen and (max-width: 710px) {
+    .banner-text {
+        display: none;
+    }
+    nav {
+        grid-column: 25 / 41 !important;
+    }
+    nav ul li {
+        padding: 0 0.5;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner-text {
+        display: none;
+    }
+    .banner {
+        display: block;
+        height: 30rem;
+        width: 100%;
+    }
+    .intro {
+        height: 100%;
+        background-color: rgba(250, 249, 249, 0.6);
+    }
+    header nav {
+        grid-column: 20 / 41 !important;
+    }
+    header h1 {
+        padding-left: 0.5rem;
+    }
+    nav ul li {
+        padding: 0 0.5rem;
+    }
 }
