@@ -1,27 +1,34 @@
 let projects = [
     {
-        "date": "24/04/22",
+        "date": "2022/04/21",
         "title": "Mixed Messages",
         "description": "This project was created using javascript ..."
     },
     {
-        "date": "23/04/22",
+        "date": "2022/04/23",
         "title": "Snake",
         "description": "This project was created using javascript ..."
     },
     {
-        "date": "25/04/22",
+        "date": "2022/01/12",
         "title": "Wordle",
         "description": "This project was created using javascript ..."
     },
     {
-        "date": "24/02/22",
+        "date": "2017/08/19",
         "title": "Cheat Sheet",
         "description": "This project was created using javascript ..."
     }
 ]
 
-for (i = 0; i < 3; i++) {
+projects.sort(function compare(obj1, obj2){
+    return new Date(obj2.date) - new Date(obj1.date)
+})
+console.log(projects);
+
+
+
+for (i = 0; i < 2; i++) {
     let project = document.createElement('div');
     project.className = "project";
     let projectHeader = document.createElement('h4');
